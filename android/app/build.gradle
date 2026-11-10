@@ -1,0 +1,29 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.example.semana13permisos'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'com.example.semana13permisos'
+        minSdk 24
+        // Desde targetSdk 31, Android ignora una solicitud de ACCESS_FINE_LOCATION
+        // que no incluya ACCESS_COARSE_LOCATION. El ejercicio solo pide FINE.
+        targetSdk 30
+        versionCode 1
+        versionName '1.0'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'androidx.activity:activity:1.9.3'
+    implementation 'androidx.core:core:1.13.1'
+}
